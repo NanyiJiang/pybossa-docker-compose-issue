@@ -1,0 +1,3 @@
+worker: python app_context_rqworker.py scheduled_jobs super high medium low email maintenance
+scheduler: rqscheduler --host 127.0.0.1
+pybossa: python run.py

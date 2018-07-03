@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: "postgres:9.5.9"
+    environment:
+      - POSTGRES_USER=pybossa
+      - POSTGRES_PASSWORD=pw
+
+  pybossa:
+    build: .
+    ports:
+        - "5555:5555"
+    links:
+      - db
